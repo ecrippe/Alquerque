@@ -1,0 +1,82 @@
+var vertices = [ 
+		vec2(xMin,yMin),
+		vec2(xMin,yMax),
+		vec2(xMax,yMax),
+		vec2(xMax,yMin)
+	];
+			
+	for(var i = 0; i < 2; i++){
+		points.push(vertices[i]);
+		points.push(vertices[i+2]);
+	}
+				
+		var yD = yMax/2.0;
+		var xD = xMax/2.0;
+		//pushing the points for the horizontal & vertical lines
+		for(var i = 0; i < 5; i++){
+		//horizontal ponts
+			points.push(vec2(xMin, yMax - i*yD));
+			points.push(vec2(xMax, yMax - i*yD));
+
+			//vertical points
+			points.push(vec2(xMax - i*xD, yMax));
+			points.push(vec2(xMax - i*xD, yMin));
+		}
+		
+		points.push(vec2(0, -1));
+		points.push(vec2(-1, 0));
+		points.push(vec2(-1, 0));
+		points.push(vec2(0, 1));
+		points.push(vec2(0, 1));
+		points.push(vec2(1, 0));
+		points.push(vec2(1, 0));
+		points.push(vec2(0, -1));
+		
+		points.push(vec2(-0.5,-0.5))
+		points.push(vec2(0.5, 0.5))
+		
+		
+		
+		
+	points.push(vec2(x - side/2, y + side/2));
+	points.push(vec2(x + side/2, y + side/2));
+	points.push(vec2(x + side/2, y + side/2));
+	points.push(vec2(x + side/2, y - side/2));
+	points.push(vec2(x + side/2, y - side/2));
+	points.push(vec2(x - side/2, y - side/2));
+	points.push(vec2(x - side/2, y - side/2));
+	points.push(vec2(x - side/2, y + side/2));
+	vColor[index] = color;
+	index++;
+	
+	
+			if(t[0] <= xClick && t[0] >= xClick && t[1] <= yClick&& t[1] >= yClick){
+			if(firstClick){
+				firstClick = !firstClick;
+				movingPiece = i;
+			}
+			else if(!firstClick){
+				firstClick = !firstClick;
+				if(squares[movingPiece] == 1){
+					vColor[i] = vec4(0.0,1.0,0.0,1.0);
+					squares[i] = 1;
+					vColor[movingPiece] = vec4(0.0,0.0,0.0,0.0);
+				}
+				else if(squares[movingPiece] == 2){
+					vColor[i] = vec4(0.0,0.0,1.0,1.0);
+					vColor[movingPiece] = vec4(0.0,0.0,0.0,0.0);
+				}
+				test = true;
+			}
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
